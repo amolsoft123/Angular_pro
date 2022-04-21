@@ -45,16 +45,17 @@ export class AppComponent {
 
   ngOnInit() {
 
-      //  this._freeApiService.getcomments()
-      //  .subscribe
-      //  (
+     this._freeApiService.getcomments()
+     .subscribe
+       (
          
-      //     data=>
-      //     {
-      //        this.lstcomments = data;
-      //     }
-
-      //  );
+          data=>
+          {
+             this.lstcomments = data;
+             console.log(data);
+          }
+          
+       );
 
       //  this._freeApiService.getcommentsbyparameter()
       //  .subscribe
