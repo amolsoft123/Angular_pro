@@ -3,21 +3,21 @@ import { Observable } from "rxjs";
 import  {HttpClient,HttpParams} from '@angular/common/http';
 import  {Posts} from '../classes/posts';
 
-
-
 @Injectable()
 export class freeApiService{
-
-    constructor(private httpclient: HttpClient) {}
-
-    getcomments(): Observable <any> {
-
-        return this.httpclient.get("http://127.0.0.1:8000/GenerateForm/")
-
+    constructor(private httpclient: HttpClient) {
     }
 
-    getcommentsbyparameter(): Observable<any> {
-        let params1 = new HttpParams().set('userId',"1");
+    getcomments(campaign_id?:string): Observable <any> {
+        let params = {}
+        if(campaign_id){
+            params['campaign_id'] = campaign_id
+        }
+        return this.httpclient.get("http://127.0.0.1:8000/GenerateForm/",params)
+    }
+
+    getcommentsbyparameter(campaign_id?:string): Observable<any> {
+        let params1 = new HttpParams().set('campaign_id',campaign_id);
         return this.httpclient.get("http://127.0.0.1:8000/GenerateForm/",{params:params1})     
 
     }

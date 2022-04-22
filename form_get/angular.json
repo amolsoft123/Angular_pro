@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "ce615bf2-85c2-4685-9668-7f35dd50a909"
+    "analytics": "d4ec090f-b6dc-425c-99b4-56857544d18e"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "form_render": {
+    "form_get": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/form_render",
+            "outputPath": "dist/form_get",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "form_render:build:production"
+              "browserTarget": "form_get:build:production"
             },
             "development": {
-              "browserTarget": "form_render:build:development"
+              "browserTarget": "form_get:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "form_render:build"
+            "browserTarget": "form_get:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "form_render"
+  "defaultProject": "form_get"
 }

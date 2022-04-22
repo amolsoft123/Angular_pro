@@ -5,6 +5,7 @@ import { FormioAuthService } from '@formio/angular/auth';
 import { freeApiService } from './services/freeapi.service';
 import { Comments } from './classes/comments';
 import { Posts } from './classes/posts';
+import { HttpParams } from '@angular/common/http';
 
 
 
@@ -44,18 +45,14 @@ export class AppComponent {
   objPosts:Posts;
 
   ngOnInit() {
-
-     this._freeApiService.getcomments()
-     .subscribe
-       (
-         
-          data=>
-          {
-             this.lstcomments = data;
-             console.log(data);
+     let campaign_id = "c0bd07d4-9398-49dd-877c-cc59ec9d8d8a"; 
+     this._freeApiService.getcomments(campaign_id).subscribe(data=>{
+             this.lstcomments = data[0].data.components;
+             console.log(this.lstcomments);
           }
-          
        );
+      }
+    }
 
       //  this._freeApiService.getcommentsbyparameter()
       //  .subscribe
@@ -85,6 +82,6 @@ export class AppComponent {
       // )
 
 
-  }
-}
+//   }
+// }
 

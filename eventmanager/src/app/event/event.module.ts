@@ -16,10 +16,10 @@ const eventRoutes: Routes = FormioResourceRoutes(
     view: ViewComponent
   }
 );
-eventRoutes[2].children.push({
-  path: 'registrations',
-  loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
-});
+// eventRoutes[2].children.push({
+//   path: 'registrations',
+//   loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
+// });
 
 @NgModule({
   declarations: [

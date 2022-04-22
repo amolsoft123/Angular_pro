@@ -1,18 +1,39 @@
-<div class="alert alert-primary" role="alert">
+<!-- <div class="alert alert-primary" role="alert">
     
     <h3>Event Registration Application</h3>
     <h5>This is an example home page for the Event Registration Application</h5>
-  </div>
+  </div> -->
+  <html>
+    <head>
+      <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+      <link rel='stylesheet' href='https://cdn.form.io/formiojs/formio.full.min.css'>
+      <script src='https://cdn.form.io/formiojs/formio.full.min.js'></script>
+      <script type='text/javascript'>
+        window.onload = function() {
+          Formio.builder(document.getElementById('builder'), {}, {});
+        };
+      </script>
+    </head>
+    <body>
+
+      
+      <!-- <form-builder [form]="form" (change)="onChange($event)"></form-builder> -->
+      <!-- <div class="well jsonviewer">
+        <pre id="json"><code class="language-json" style="display: none;" #json></code></pre>
+        <button  class="mt-5 btn btn-primary" (click)="abc1()">Submit</button>
+      </div> -->
+      <formio [form]="lstcomments"></formio>
+    </body>
+  </html><br>
+
+  
+
+
 
  
-  <form-builder [form]="form" (change)="onChange($event)"></form-builder>
-  <div class="well jsonviewer">
-    <pre id="json"><code class="language-json" style="display: none;" #json></code></pre>
-    <button  class="mt-5 btn btn-primary" (click)="abc1()">Submit</button>
-  </div>
+  
 
-        
-    
+
 
 
     
